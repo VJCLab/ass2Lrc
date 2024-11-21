@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko" data-bs-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ASS 파일 에서 LRC 파일 KARAOKE 변환</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
+		<style>
+			html,
+			body {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+			textarea {
+				width: 100%;
+				height: 200px;
+				font-family: monospace;
+				font-size: 16px;
+				padding: 10px;
+				border: 1px solid #ddd;
+				margin-bottom: 20px;
+			}
+		</style>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script type="module" src="./app.js"></script>
+	</head>
+	<body class="d-flex flex-column justify-content-between bg-dark p-3">
+		<main class="d-flex flex-column flex-fill  align-items-center">
+			<h1 class="text-white">ASS 파일 에서 LRC 파일 KARAOKE 변환</h1>
+			<div class="form-floating w-100">
+				<textarea
+					class="form-control"
+					placeholder="ASS 파일 내부의 문자들을 넣어주세요..."
+					id="assInput"
+					style="height: 200px"
+				></textarea>
+				<label for="assInput">ASS 파일 내부의 문자들을 넣어주세요...</label>
+			</div>
+			<p class="text-white">또는</p>
+			<div class="w-100">
+				<label for="formFileLg" class="form-label text-white">파일업로드</label>
+				<input
+					class="form-control form-control-lg"
+					id="formFileLg"
+					type="file"
+				/>
+			</div>
+			<button type="button" class="btn btn-primary my-4" id="convertAssToLrc">
+				변환하기
+			</button>
+			<h2 class="text-white align-self-start">변환 결과:</h2>
+			<textarea
+				class="form-control flex-fill"
+				placeholder="여기에 표시 예정..."
+				id="lrcOutput"
+				readonly
+			></textarea>
+			<button type="button" class="btn btn-primary" id="save" disabled>
+				<i class="bi bi-save"></i>
+				<span>다운로드</span>
+			</button>
+		</main>
+		<footer>
+			<p class="text-white">
+				&copy; 2024 ASS to KARAOKE Converter by sodadayo20. All rights reserved.
+			</p>
+		</footer>
+	</body>
+</html>
