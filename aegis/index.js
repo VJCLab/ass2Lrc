@@ -63,6 +63,8 @@ async function processTextWithKTags(text, startTime) {
 const dialogueRegex =
     /Dialogue:\s*(\d+),([\d:.]+),([\d:.]+),([^,]+),([^,]*),([^,]*),([^,]*),([^,]*),([^,]*),(.*)/g;
 
+const author = [`[re: ASS2LRC_Converter (by vjcLab)]`];
+
 /**
  * Converts ASS (AegisSub) format to LRC (Lyrics) format.
  * This method processes each dialogue line in the ASS text, extracts timing and text information,
@@ -73,7 +75,6 @@ const dialogueRegex =
  */
 async function assToLrc(assText) {
     const lrcText = [];
-    const author = [`[re: ASS2LRC_Converter (by jomin398)]`];
     let match;
 
     // 각 Dialogue 라인 처리 (비동기적으로 처리)

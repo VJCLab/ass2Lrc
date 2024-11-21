@@ -51,7 +51,7 @@ LRC 파일은 가사와 함께 타임스탬프가 포함된 파일 형식으로,
 ## 사용 방법
 
 1. ASS 파일을 준비합니다. [예시파일 다운로드](./example.ass)
-2. [페이지](https://github.com/vjclab/ass2Lrc)를 실행하여 ASS 파일을 LRC 파일로 변환합니다.
+2. [페이지](https://vjclab.github.io/ass2Lrc)를 실행하여 ASS 파일을 LRC 파일로 변환합니다.
 
 ## 요구 사항
 
